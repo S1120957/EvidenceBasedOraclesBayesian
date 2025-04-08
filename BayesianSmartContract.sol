@@ -12,7 +12,7 @@ contract BayesianSmartContract {
 
     /// Capturing evidences
     struct Evidence {
-        bool gpsCat;   // true = close, false = far
+        bool gpsCat;   // Close=true, Far=false
         bool pc;       // Patient Confirmation
         bool pr;       // Physician Prescription
         bool pmd;      // Physician Medical Device sensor data
