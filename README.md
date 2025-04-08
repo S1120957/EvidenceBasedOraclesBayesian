@@ -1,4 +1,4 @@
-Evidence-based Oracles Using Bayesian Network
+**Evidence-based Oracles Using Bayesian Network**
 
 Introduction
 BayesianSmartContract is an on-chain implementation of Bayesian inference in Solidity that classifies physician visits as either 
