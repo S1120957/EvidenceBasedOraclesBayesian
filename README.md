@@ -17,3 +17,18 @@ Then, Bayes’ Theorem is applied using predefined prior and conditional probabi
         b) Predict the most probable visit type (PPH or PPR) based on the evidence.
         c) Emit detailed inference logs via events (BayesianCalc and VisitPhysician) for auditability and verifiability.
 
+**Event Output**
+-> Two events are emitted:
+    _BayesianCalc_ — logs all intermediate Bayesian inference components:
+        priorPPH, priorPPR
+        likelihoodPPH, likelihoodPPR
+        jointPPH, jointPPR
+        marginalEvidence
+        posteriorPPH, posteriorPPR
+        These values are all scaled by 10000 to maintain 4-digit precision in Solidity.
+
+->  _VisitPhysician_ — logs:
+        The msg.sender (calling address)
+        The final predicted VisitType
+        The posterior probability of the predicted class
+        The block.timestamp
