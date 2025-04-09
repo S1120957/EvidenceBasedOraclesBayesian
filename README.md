@@ -18,8 +18,9 @@ Then, Bayes’ Theorem is applied using predefined prior and conditional probabi
         c) Emit detailed inference logs via events (BayesianCalc and VisitPhysician) for auditability and verifiability.
 
 **Event Output**
--> Two events are emitted:
-    _BayesianCalc_ — logs all intermediate Bayesian inference components:
+Two events are emitted:
+
+->    _BayesianCalc_ — logs all intermediate Bayesian inference components:
         priorPPH, priorPPR
         likelihoodPPH, likelihoodPPR
         jointPPH, jointPPR
