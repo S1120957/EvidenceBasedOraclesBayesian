@@ -20,7 +20,7 @@ Then, Bayes’ Theorem is applied using predefined prior and conditional probabi
 **Event Output**
 Two events are emitted:
 
-->    _BayesianCalc_ — logs all intermediate Bayesian inference components:
+->    _BayesianCalc_ all intermediate Bayesian inference components:
         priorPPH, priorPPR
         likelihoodPPH, likelihoodPPR
         jointPPH, jointPPR
@@ -28,7 +28,7 @@ Two events are emitted:
         posteriorPPH, posteriorPPR
         These values are all scaled by 10000 to maintain 4-digit precision in Solidity.
 
-->  _VisitPhysician_ — logs:
+->  _VisitPhysician_:
         The msg.sender (calling address)
         The final predicted VisitType
         The posterior probability of the predicted class
