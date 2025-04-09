@@ -1,7 +1,7 @@
 **Evidence-based Oracles Using Bayesian Network**
 
 **Introduction**
-BayesianSmartContract is an on-chain implementation of Bayesian inference in Solidity that classifies physician visits as either 
+BayesianSmartContract is an on-chain implementation of Bayesian inference in Solidity that classifies physician visits as  
 in-person (PPH) or remote (PPR) based on multiple real-world evidence inputs. Unlike traditional smart contracts that rely on 
 external oracles to provide and interpret data, this contract embeds a probabilistic reasoning engine directly within the 
 Ethereum Virtual Machine (EVM), enabling trustless, transparent, and automated decision-making based on real-world medical indicators.
@@ -18,18 +18,17 @@ Then, Bayes’ Theorem is applied using predefined prior and conditional probabi
         c) Emit detailed inference logs via events (BayesianCalc and VisitPhysician) for auditability and verifiability.
 
 **Event Output**
-Two events are emitted:
+Two events are emitted by the smart contract:
 
-->    _BayesianCalc_ all intermediate Bayesian inference components:
-        priorPPH, priorPPR
-        likelihoodPPH, likelihoodPPR
-        jointPPH, jointPPR
-        marginalEvidence
-        posteriorPPH, posteriorPPR
-        These values are all scaled by 10000 to maintain 4-digit precision in Solidity.
+1.    _BayesianCalc_ all intermediate Bayesian inference components:
+        * priorPPH, priorPPR
+        * likelihoodPPH, likelihoodPPR
+        * jointPPH, jointPPR
+        * marginalEvidence
+        * posteriorPPH, posteriorPPR.
 
 ->  _VisitPhysician_:
-        The msg.sender (calling address)
-        The final predicted VisitType
-        The posterior probability of the predicted class
-        The block.timestamp
+        * The msg.sender (calling address)
+        * The final predicted VisitType
+        * The posterior probability of the predicted class
+        * The block.timestamp
